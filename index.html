@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>ระบบติดตามโครงการ แผนกเวชาสารสนเทศ โรงพยาบาลจันทรุเบกษา</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            /* อนุญาตให้เลื่อนแนวตั้งได้ แต่ล็อกไม่ให้เลื่อนซ้าย-ขวา */
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            background-color: #0099FF;
+        }
+
+        .iframe-container {
+            width: 100%;
+            min-height: 100dvh;
+            /* เว้นระยะปลอดภัยด้านล่างสำหรับ Home bar ของมือถือ */
+            padding-bottom: env(safe-area-inset-bottom, 20px);
+            display: flex;
+        }
+
+        iframe {
+            width: 100%;
+            /* ให้ iframe ขยายเต็มพื้นที่ความสูง หรือยืดตามเนื้อหา */
+            min-height: 100dvh;
+            border: none;
+            display: block;
+        }
+
+        /* =========================
+           Mobile
+           ========================= */
+        @media (max-width: 768px) {
+            .iframe-container {
+                /* เพิ่มระยะ padding ด้านล่างกันเมนูจม */
+                padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 30px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="iframe-container">
+        <iframe src="https://script.google.com/macros/s/AKfycbyG8KfQuH0lYiklPq8MIpOKMfESKAkbOy_9UGTintiD3P3sHnxWO9rTziLTrfd8UZtYBw/exec"></iframe>
+    </div>
+
+</body>
+</html>
